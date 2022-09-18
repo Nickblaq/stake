@@ -52,15 +52,21 @@ const Navbar = () => {
                     <img className="h-10" src="logo.svg" />
                 </a>
                     <ul className="hidden py-4 items-center md:flex space-x-3 sm:space-x-6 sm:justify-end">
-                                <li className="text-gray-200" >
-                                    <a >HOME</a>
+                    <Link href="/">
+                                <li className="text-gray-200 cursor-pointer" >
+                                    HOME
                                 </li>
-                                <li className="text-gray-200" >
-                                    <a >MINT</a>
+                                </Link>
+                                <Link href="/mint">
+                                <li className="text-gray-200 cursor-pointer" >
+                                    MINT
                                 </li>
-                                <li className="text-gray-200" >
-                                    <a >STAKE</a>
+                                </Link>
+                                <Link href="/vesting">
+                                <li className="text-gray-200 cursor-pointer" >
+                                    STAKE
                                 </li>
+                                </Link>
                                 <li className="text-gray-200" >
                                     <a >Telegram</a>
                                 </li>
@@ -78,7 +84,7 @@ const Navbar = () => {
                 </button>
                 </nav>
 
-                <div className='flex justify-evenly items-center pt-4 px-4'>
+                <div className='flex md:hidden justify-evenly items-center pt-4 px-4'>
                     <Link href="/">
                     <p className='p-2 hover:bg-white hover:text-black active:bg-white active:text-black'>HOME</p>
                     </Link>
@@ -149,7 +155,7 @@ const Navbar = () => {
             truncateAddress(address)
         }</div>
         <div className='pb-6'>Connected to {connector?.name} wallet</div>
-        {chain && <div className='pb-6'>Connected on {chain?.name}</div>}
+        {chain && <div className='pb-6'>Connected on {chain?.name} smart chain</div>}
         <div className='flex justify-between'>
         <button
         className='bg-[#24ff00] py-2 px-2  rounded-sm mt-4 mb-2'

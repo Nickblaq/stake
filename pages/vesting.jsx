@@ -1,12 +1,12 @@
 import Stake from "../components/Stake"
-
+import Coin from "../components/Coin"
 
 const Vesting = () => {
 
     return (
 
         <>
-        <Stake  />  
+     <Coin /> 
         </>
     )
 }

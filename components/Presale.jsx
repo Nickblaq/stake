@@ -6,7 +6,7 @@ import {useRouter} from 'next/router'
 import { toast } from 'react-toastify';
 import sale from '../abi/Presale.json'
 
-const IdoAddress = '0x7e20987d4e0f30A1F20e26196b73f19708687Acd'
+const IdoAddress = '0x00869E47ab36e5F2672D89080bBF823Fa46fD575'
 let texx
 const Presale = () => {
 
@@ -120,7 +120,7 @@ const [isCondition, setCondition] = useState('');
             if (!referralAddress || referralAddress.length !== 42) {
                 referralAddress = '0x0000000000000000000000000000000000000000'
             }
-            if (isAmount < 0.06 ) {
+            if (isAmount < 0.01 ) {
                 setMessage('Amount lower than minimum, minimum 0.6')
             }
             if (referralAddress === address) {
