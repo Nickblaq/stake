@@ -138,7 +138,7 @@ const [isCondition, setCondition] = useState('');
         } 
         catch (error) {
             
-            toast.error('Error. Something went wrong')
+            toast.error(error)
             setBuyLoading(false)
         }
     }
